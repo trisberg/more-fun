@@ -1,7 +1,7 @@
 accelerator:
   displayName: More Fun
   description: A simple Spring Cloud Function serverless app -- includes option for native build
-  iconUrl: https://raw.githubusercontent.com/sample-accelerators/icons/master/icon-cloud.png
+  iconUrl: https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.newdesignfile.com%2Fpostpic%2F2011%2F02%2F3d-animated-emoticons_81657.png&f=1&nofb=1
   tags:
   - java
   - spring
