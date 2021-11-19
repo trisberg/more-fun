@@ -1,0 +1,49 @@
+apiVersion: skaffold/v2beta15
+kind: Config
+metadata:
+  name: more-fun
+build:
+  artifacts:
+  - image: more-fun
+    custom:
+      buildCommand: |-
+        ./mvnw spring-boot:build-image -DskipTests -Dspring-boot.build-image.imageName=$IMAGE
+        if [ $PUSH_IMAGE ]; then
+          docker push $IMAGE
+        fi
+      dependencies:
+        paths:
+          - src
+          - pom.xml
+  tagPolicy:
+    sha256: {}
+deploy:
+  kubectl:
+    manifests:
+    - kubernetes/service.yaml
+    - kubernetes/deployment.yaml
+portForward:
+  - resourceType: service
+    resourceName: more-fun
+    port: 80
+    localPort: 8080
+
+profiles:
+- name: local
+  build:
+    local:
+      push: false
+- name: native
+  build:
+    artifacts:
+    - image: more-fun
+      custom:
+        buildCommand: |-
+          ./mvnw spring-boot:build-image -Pnative-buildpack -DskipTests -Dspring-boot.build-image.imageName=$IMAGE
+          if [ $PUSH_IMAGE ]; then
+            docker push $IMAGE
+          fi
+        dependencies:
+          paths:
+            - src
+            - pom.xml
