@@ -33,6 +33,10 @@ accelerator:
     dataType: boolean
     defaultValue: false
 
+  - name: projectName
+    display: false
+    defaultValue: "test-more"
+
 engine:
   merge:
     - include: [ "**" ]
