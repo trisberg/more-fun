@@ -1,6 +1,6 @@
 accelerator:
   displayName: More Fun
-  description: Testing a simple Spring Cloud Function serverless app (#2)
+  description: Testing a simple Spring Cloud Function serverless app (#3)
   iconUrl: https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.newdesignfile.com%2Fpostpic%2F2011%2F02%2F3d-animated-emoticons_81657.png&f=1&nofb=1
   tags:
   - java
@@ -40,7 +40,7 @@ accelerator:
     defaultValue: "test-more"
 
   - name: toggleIDESupport
-    inputType: toggle
+    inputType: checkbox
     label: Include IDE Support for Java Workloads
     display: true
     dataType: boolean
@@ -50,8 +50,8 @@ accelerator:
     inputType: text
     label: Prefix for the container image repository
     defaultValue: dev.local
-    #dependsOn:
-    #  name: toggleIDESupport
+    dependsOn:
+      name: toggleIDESupport
     required: true
 
 engine:
