@@ -1,6 +1,6 @@
 accelerator:
   displayName: More Fun
-  description: Testing a simple Spring Cloud Function serverless app (#3)
+  description: Testing a simple Spring Cloud Function serverless app (#4)
   iconUrl: https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.newdesignfile.com%2Fpostpic%2F2011%2F02%2F3d-animated-emoticons_81657.png&f=1&nofb=1
   tags:
   - java
@@ -52,6 +52,7 @@ accelerator:
     defaultValue: dev.local
     dependsOn:
       name: toggleIDESupport
+      value: true
     required: true
 
 engine:
