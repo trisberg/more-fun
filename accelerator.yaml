@@ -40,22 +40,6 @@ accelerator:
     display: false
     defaultValue: "test-more"
 
-  - name: toggleIDESupport
-    inputType: checkbox
-    label: Include IDE Support for Java Workloads
-    display: true
-    dataType: boolean
-    defaultValue: false
-
-  - name: repositoryPrefix
-    inputType: text
-    label: Prefix for the container image repository
-    defaultValue: dev.local
-    dependsOn:
-      name: toggleIDESupport
-      value: true
-    required: true
-
 engine:
   merge:
     - include: [ "**" ]
