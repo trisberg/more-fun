@@ -126,3 +126,4 @@ engine:
           rewriteTo: "'README.md'"
     - type: AcceleratorInvocation
       reference: java-version
+  onConflict: FavorForeign
