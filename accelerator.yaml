@@ -35,6 +35,11 @@ accelerator:
     display: false
     defaultValue: "test-more"
 
+  imports:
+    - name: java-version
+      expose:
+        - name: "*"
+
 engine:
   merge:
     - include: [ "**" ]
