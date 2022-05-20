@@ -37,5 +37,5 @@ engine:
             with: "#artifactId"
     - type: AcceleratorInvocation
       reference: java-version
-    - type: AcceleratorInvocation
-      reference: tap-initialize
+#     - type: AcceleratorInvocation
+#       reference: tap-initialize
