@@ -8,9 +8,9 @@ accelerator:
     - test
 
   imports:
-    # - name: java-version
-    #   expose:
-    #     - name: "*"
+    - name: java-version
+      expose:
+        - name: "*"
     - name: tap-initialize
       expose:
         - name: "*"
