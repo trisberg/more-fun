@@ -14,6 +14,9 @@ accelerator:
     - name: tap-initialize
       expose:
         - name: "*"
+    - name: live-update
+      expose:
+        - name: "*"
 
 engine:
   merge:
