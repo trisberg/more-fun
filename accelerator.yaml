@@ -36,6 +36,6 @@ engine:
           - text: more-fun template repo
             with: "#artifactId"
     - type: AcceleratorInvocation
-      reference: tap-initialize
-    - type: AcceleratorInvocation
       reference: java-version
+    - type: AcceleratorInvocation
+      reference: tap-initialize
