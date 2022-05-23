@@ -1,4 +1,4 @@
-package com.example.HelloApp;
+package com.example.helloapp;
 
 import java.util.function.Function;
 
